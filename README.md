@@ -14,7 +14,6 @@ This repo is built for people who want to:
 ```text
 .
 ├── README.md
-├── REPO_DESCRIPTION.txt
 ├── .gitignore
 ├── bin/
 │   ├── ollama-profile
