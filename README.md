@@ -2,10 +2,6 @@
 
 Cross-platform Ollama launch profiles and coding-focused `Modelfile`s for **macOS** and **Linux**, tuned especially for **Apple Silicon laptops** and local agent workflows like **OpenCode** and **Aider**.
 
-**Suggested repo description:**
-
-> Cross-platform Ollama launch profiles and coding-focused Modelfiles for macOS and Linux, tuned especially for Apple Silicon laptops and local agent workflows like OpenCode and Aider.
-
 This repo is built for people who want to:
 
 - start `ollama serve` with repeatable profiles instead of retyping env vars
