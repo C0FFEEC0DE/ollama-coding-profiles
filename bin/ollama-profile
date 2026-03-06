@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<USAGE
+Usage:
+  ./bin/ollama-profile <profile>
+
+Profiles:
+  m1-stable
+  m1-balanced
+  m1-opencode
+  m1-aider
+  m1-max-context
+  private
+  debug
+USAGE
+}
+
+if [[ $# -ne 1 ]]; then
+  usage
+  exit 1
+fi
+
+case "$1" in
+  m1-stable)
+    exec "$(dirname "$0")/ollama-profile-m1-stable.sh"
+    ;;
+  m1-balanced)
+    exec "$(dirname "$0")/ollama-profile-m1-balanced.sh"
+    ;;
+  m1-opencode)
+    exec "$(dirname "$0")/ollama-profile-m1-opencode.sh"
+    ;;
+  m1-aider)
+    exec "$(dirname "$0")/ollama-profile-m1-aider.sh"
+    ;;
+  m1-max-context)
+    exec "$(dirname "$0")/ollama-profile-m1-max-context.sh"
+    ;;
+  private)
+    exec "$(dirname "$0")/ollama-profile-private.sh"
+    ;;
+  debug)
+    exec "$(dirname "$0")/ollama-profile-debug.sh"
+    ;;
+  -h|--help|help)
+    usage
+    ;;
+  *)
+    echo "Unknown profile: $1" >&2
+    usage
+    exit 1
+    ;;
+esac
